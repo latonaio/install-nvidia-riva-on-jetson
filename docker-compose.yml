@@ -1,0 +1,11 @@
+version: '3'
+services:
+  riva-jupyter:
+    container_name: riva-jupyter
+    build: .
+    volumes:
+      - ./:/app/mnt
+    ports:
+      - 8889:8889
+    working_dir: /app/mnt
+    tty: true
